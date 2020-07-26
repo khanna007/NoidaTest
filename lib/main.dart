@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             margin: EdgeInsets.only(
                                 top: MediaQuery.of(context).size.height * .48),
                             width: MediaQuery.of(context).size.width * .9,
-                            height: 280,
+                            height: 310,
                             child: Card(
                               elevation: 10,
                               shape: RoundedRectangleBorder(
@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Container(
-                                    margin: EdgeInsets.only(top: 10, left: 20),
+                                    margin: EdgeInsets.only(top: 20, left: 20),
                                     child: Column(
                                       children: <Widget>[
                                         Row(
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                               "Straight cut suits",
                                               style: TextStyle(
                                                   color: Color(0xFF921C04),
-                                                  fontWeight: FontWeight.w700,
+                                                  fontWeight: FontWeight.w800,
                                                   fontSize: 22),
                                             ),
                                             Spacer(),
@@ -90,16 +90,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                             )
                                           ],
                                         ),
-                                        Wrap(
-                                          children: <Widget>[
-                                            Text(
-                                              "Lorem Ipsum is simply dummy text of the printing and typesetting industry ",
-                                              style: TextStyle(
-                                                  color: Colors.grey,
-                                                  fontWeight: FontWeight.w400,
-                                                  fontSize: 18),
-                                            ),
-                                          ],
+                                        Container(
+                                          margin: EdgeInsets.only(top: 10),
+                                          child: Wrap(
+                                            children: <Widget>[
+                                              Text(
+                                                "Lorem Ipsum is simply dummy text of the printing and typesetting industry ",
+                                                style: TextStyle(
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 18),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                         Container(
                                           margin: EdgeInsets.only(top: 10),
@@ -127,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 style: TextStyle(
                                                     color: Colors.grey,
                                                     fontWeight: FontWeight.w400,
-                                                    fontSize: 18),
+                                                    fontSize: 14),
                                               ),
                                             ],
                                           ),
@@ -150,7 +153,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                               Text(
                                                 '\$2500',
                                                 style: TextStyle(
-                                                    fontSize: 18,
+                                                    fontSize: 16,
+                                                    color: Colors.grey,
+                                                    fontWeight: FontWeight.w700,
                                                     decoration: TextDecoration
                                                         .lineThrough),
                                               ),
@@ -159,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                     EdgeInsets.only(left: 20),
                                               ),
                                               Text(
-                                                '30 % Off',
+                                                '30% Off',
                                                 style: TextStyle(
                                                     color: Colors.green,
                                                     fontWeight: FontWeight.w700,
@@ -173,13 +178,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                           thickness: 2,
                                         ),
                                         Container(
+                                          margin: EdgeInsets.only(top: 10),
                                           child: Row(
                                             children: <Widget>[
                                               Text(
                                                 "Size",
                                                 style: TextStyle(
-                                                    color: Colors.grey[800],
-                                                    fontWeight: FontWeight.w700,
+                                                    color: Colors.grey[700],
+                                                    fontWeight: FontWeight.w800,
                                                     fontSize: 20),
                                               ),
                                               Spacer(),
@@ -198,6 +204,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                             ],
                                           ),
                                         ),
+                                        Padding(
+                                            padding: EdgeInsets.only(top: 10)),
                                         Container(
                                           child: Row(
                                             children: <Widget>[
@@ -208,10 +216,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   height: 56,
                                                   width: 56,
                                                   color: _value == 0
-                                                      ? Colors.grey
+                                                      ? Color(0xFF5E1303)
                                                       : Colors.transparent,
                                                   child: Center(
-                                                    child: Text("S"),
+                                                    child: Text(
+                                                      "S",
+                                                      style: TextStyle(
+                                                          color: _value == 0
+                                                              ? Colors.white
+                                                              : Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          fontSize: 16),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -223,10 +240,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   height: 56,
                                                   width: 56,
                                                   color: _value == 1
-                                                      ? Colors.grey
+                                                      ? Color(0xFF5E1303)
                                                       : Colors.transparent,
                                                   child: Center(
-                                                    child: Text("S"),
+                                                    child: Text(
+                                                      "XS",
+                                                      style: TextStyle(
+                                                          color: _value == 1
+                                                              ? Colors.white
+                                                              : Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          fontSize: 16),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -238,10 +264,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   height: 56,
                                                   width: 56,
                                                   color: _value == 2
-                                                      ? Colors.grey
+                                                      ? Color(0xFF5E1303)
                                                       : Colors.transparent,
                                                   child: Center(
-                                                    child: Text("M"),
+                                                    child: Text(
+                                                      "S",
+                                                      style: TextStyle(
+                                                          color: _value == 2
+                                                              ? Colors.white
+                                                              : Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          fontSize: 16),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -253,10 +288,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   height: 56,
                                                   width: 56,
                                                   color: _value == 3
-                                                      ? Colors.grey
+                                                      ? Color(0xFF5E1303)
                                                       : Colors.transparent,
                                                   child: Center(
-                                                    child: Text("L"),
+                                                    child: Text(
+                                                      "S",
+                                                      style: TextStyle(
+                                                          color: _value == 3
+                                                              ? Colors.white
+                                                              : Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          fontSize: 16),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -268,10 +312,19 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   height: 56,
                                                   width: 56,
                                                   color: _value == 4
-                                                      ? Colors.grey
+                                                      ? Color(0xFF5E1303)
                                                       : Colors.transparent,
                                                   child: Center(
-                                                    child: Text("XL"),
+                                                    child: Text(
+                                                      "S",
+                                                      style: TextStyle(
+                                                          color: _value == 4
+                                                              ? Colors.white
+                                                              : Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          fontSize: 16),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
@@ -300,29 +353,38 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Text(
                                   "Available Offers",
                                   style: TextStyle(
-                                      color: Colors.grey,
+                                      color: Colors.grey[700],
                                       fontWeight: FontWeight.w700,
-                                      fontSize: 20),
+                                      fontSize: 22),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 20),
                                 ),
                               ],
                             ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 10),
+                            ),
                             Row(
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 20),
+                                  padding: EdgeInsets.only(left: 70, top: 10),
                                 ),
                                 Text(
-                                  "5% intant Discount by Paying Online  >",
+                                  "5% intant Discount by Paying Online",
                                   style: TextStyle(
                                       color: Colors.grey,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 20),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 20),
+                                Spacer(),
+                                Container(
+                                  margin: EdgeInsets.only(right: 60),
+                                  child: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.grey,
+                                    size: 20,
+                                  ),
                                 ),
                               ],
                             ),
@@ -332,35 +394,41 @@ class _MyHomePageState extends State<MyHomePage> {
                             Row(
                               children: <Widget>[
                                 Padding(
-                                  padding: EdgeInsets.only(left: 20),
+                                  padding: EdgeInsets.only(left: 70),
                                 ),
                                 Text(
-                                  "5% intant Discount by Paying Online  >",
+                                  "5% intant Discount by Paying Online",
                                   style: TextStyle(
                                       color: Colors.grey,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 20),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 20),
+                                Spacer(),
+                                Container(
+                                  margin: EdgeInsets.only(right: 60),
+                                  child: Icon(
+                                    Icons.arrow_forward_ios,
+                                    color: Colors.grey,
+                                    size: 20,
+                                  ),
                                 ),
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(top: 20),
+                              padding: EdgeInsets.only(top: 30),
                             ),
                             Container(
-                              height: 50.0,
-                              width: 280,
+                              height: 65.0,
+                              width: 350,
                               color: Color(0xFF5E1303),
                               child: RaisedButton(
                                 child: Center(
                                   child: Text(
-                                    'BUY Now',
+                                    'Buy Now',
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 20),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18),
                                   ),
                                 ),
                               ),
@@ -369,8 +437,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               padding: EdgeInsets.only(top: 20),
                             ),
                             Container(
-                              height: 50.0,
-                              width: 280,
+                              height: 65.0,
+                              width: 350,
                               color: Color(0xFF5E1303),
                               child: RaisedButton(
                                 child: Center(
@@ -378,15 +446,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                     'Add to cart',
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 20),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 18),
                                   ),
                                 ),
                               ),
                             ),
+                            Padding(padding: EdgeInsets.only(top: 20)),
                             Divider(
                               color: Colors.grey[500],
-                              thickness: 2,
+                              thickness: 5,
                             ),
                             Container(
                               child: Column(
@@ -397,18 +466,18 @@ class _MyHomePageState extends State<MyHomePage> {
                                         padding: EdgeInsets.only(left: 40),
                                       ),
                                       Text(
-                                        "Diliver to ",
+                                        "Deliver to ",
                                         style: TextStyle(
                                             color: Colors.grey,
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 20),
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18),
                                       ),
                                       Text(
                                         "New Delhi -100011",
                                         style: TextStyle(
                                             color: Colors.grey[800],
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 20),
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18),
                                       ),
                                       Padding(
                                         padding: EdgeInsets.only(left: 20),
@@ -416,7 +485,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     ],
                                   ),
                                   Container(
-                                    margin: EdgeInsets.only(top: 30),
+                                    margin: EdgeInsets.only(top: 20),
                                     child: Row(
                                       children: <Widget>[
                                         Padding(
@@ -437,14 +506,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                               fontSize: 20),
                                         ),
                                         Text(
-                                          "Deleiver in 5-7 days",
+                                          "Delivery in 5-7 days",
                                           style: TextStyle(
                                               color: Colors.grey[800],
                                               fontWeight: FontWeight.w700,
-                                              fontSize: 20),
+                                              fontSize: 18),
                                         ),
                                         Spacer(),
-                                        Icon(Icons.arrow_forward_ios),
+                                        Container(
+                                          margin: EdgeInsets.only(right: 60),
+                                          child: Icon(
+                                            Icons.arrow_forward_ios,
+                                            color: Colors.grey,
+                                            size: 20,
+                                          ),
+                                        ),
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                         ),
@@ -466,21 +542,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                           padding: EdgeInsets.only(left: 10),
                                         ),
                                         Text(
-                                          "Free| ",
-                                          style: TextStyle(
-                                              color: Colors.green,
-                                              fontWeight: FontWeight.w700,
-                                              fontSize: 20),
-                                        ),
-                                        Text(
-                                          "Deleiver in 5-7 days",
+                                          "Cash on Deleivery Availabe",
                                           style: TextStyle(
                                               color: Colors.grey[800],
                                               fontWeight: FontWeight.w700,
-                                              fontSize: 20),
+                                              fontSize: 18),
                                         ),
                                         Spacer(),
-                                        Icon(Icons.arrow_forward_ios),
+                                        Container(
+                                          margin: EdgeInsets.only(right: 60),
+                                          child: Icon(
+                                            Icons.arrow_forward_ios,
+                                            color: Colors.grey,
+                                            size: 20,
+                                          ),
+                                        ),
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                         ),
@@ -506,29 +582,37 @@ class _MyHomePageState extends State<MyHomePage> {
                                           style: TextStyle(
                                               color: Colors.grey[800],
                                               fontWeight: FontWeight.w700,
-                                              fontSize: 20),
+                                              fontSize: 18),
                                         ),
                                         Spacer(),
-                                        Icon(Icons.arrow_forward_ios),
+                                        Container(
+                                          margin: EdgeInsets.only(right: 60),
+                                          child: Icon(
+                                            Icons.arrow_forward_ios,
+                                            color: Colors.grey,
+                                            size: 20,
+                                          ),
+                                        ),
                                         Padding(
                                           padding: EdgeInsets.only(left: 20),
                                         ),
                                       ],
                                     ),
                                   ),
+                                  Padding(padding: EdgeInsets.only(top: 20)),
                                   Divider(
                                     color: Colors.grey[500],
-                                    thickness: 2,
+                                    thickness: 5,
                                   ),
                                   Container(
-                                    margin:
-                                        EdgeInsets.only(left: 10, right: 20),
+                                    margin: EdgeInsets.only(
+                                        left: 10, right: 20, top: 10),
                                     height: 700,
                                     child: Card(
                                       elevation: 10,
                                       shape: RoundedRectangleBorder(
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(30.0),
                                       ),
                                       child: Column(
                                         children: <Widget>[
@@ -542,7 +626,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   style: TextStyle(
                                                       color: Color(0xFF921C04),
                                                       fontWeight:
-                                                          FontWeight.w700,
+                                                          FontWeight.w900,
                                                       fontSize: 22),
                                                 ),
                                               ],
@@ -551,7 +635,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           Container(
                                             margin: EdgeInsets.only(
                                                 left: 10, top: 20),
-                                            height: 280,
+                                            height: 300,
                                             child: Card(
                                               child: ListView.builder(
                                                   scrollDirection:
@@ -566,6 +650,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                   .width *
                                                               0.35,
                                                       child: Card(
+                                                        elevation: 10,
+                                                        shape: RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20.0)),
                                                         child: Container(
                                                             child: Column(
                                                           children: <Widget>[
@@ -578,20 +668,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                                             Container(
                                                               margin: EdgeInsets
                                                                   .only(
+                                                                      top: 10,
                                                                       left: 10),
                                                               child: Row(
                                                                 children: <
                                                                     Widget>[
                                                                   Text(
-                                                                    "Similar products",
+                                                                    "Straight cut Suits",
                                                                     style: TextStyle(
                                                                         color: Color(
                                                                             0xFF921C04),
                                                                         fontWeight:
                                                                             FontWeight
-                                                                                .w700,
+                                                                                .w900,
                                                                         fontSize:
-                                                                            18),
+                                                                            16),
                                                                   ),
                                                                 ],
                                                               ),
@@ -641,13 +732,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                   Text(
                                                                     "\$1500",
                                                                     style: TextStyle(
-                                                                        color: Colors
-                                                                            .black,
+                                                                        color: Colors.grey[
+                                                                            800],
                                                                         fontWeight:
                                                                             FontWeight
                                                                                 .w700,
                                                                         fontSize:
-                                                                            16),
+                                                                            18),
                                                                   ),
                                                                   Padding(
                                                                     padding: EdgeInsets
@@ -658,6 +749,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                   Text(
                                                                     '\$2500',
                                                                     style: TextStyle(
+                                                                        color: Colors.grey[
+                                                                            700],
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w700,
                                                                         fontSize:
                                                                             14,
                                                                         decoration:
@@ -667,12 +763,26 @@ class _MyHomePageState extends State<MyHomePage> {
                                                               ),
                                                             ),
                                                             Container(
-                                                              child:
-                                                                  RaisedButton(
-                                                                color: Color(
-                                                                    0xFF5E1303),
-                                                                child:
-                                                                    Text("Buy"),
+                                                              margin: EdgeInsets
+                                                                  .only(
+                                                                      top: 20),
+                                                              width:
+                                                                  MediaQuery.of(
+                                                                          context)
+                                                                      .size
+                                                                      .width,
+                                                              height: 40,
+                                                              color: Color(
+                                                                  0xFF5E1303),
+                                                              child: Center(
+                                                                child: Text(
+                                                                  "Add to cart",
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          16,
+                                                                      color: Colors
+                                                                          .white),
+                                                                ),
                                                               ),
                                                             )
                                                           ],
@@ -685,7 +795,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           Container(
                                             margin: EdgeInsets.only(
                                                 left: 10, top: 20),
-                                            height: 280,
+                                            height: 300,
                                             child: Card(
                                               child: ListView.builder(
                                                   scrollDirection:
@@ -700,6 +810,12 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                   .width *
                                                               0.35,
                                                       child: Card(
+                                                        elevation: 10,
+                                                        shape: RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        20.0)),
                                                         child: Container(
                                                             child: Column(
                                                           children: <Widget>[
@@ -712,20 +828,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                                             Container(
                                                               margin: EdgeInsets
                                                                   .only(
+                                                                      top: 10,
                                                                       left: 10),
                                                               child: Row(
                                                                 children: <
                                                                     Widget>[
                                                                   Text(
-                                                                    "Similar products",
+                                                                    "Straight cut Suits",
                                                                     style: TextStyle(
                                                                         color: Color(
                                                                             0xFF921C04),
                                                                         fontWeight:
                                                                             FontWeight
-                                                                                .w700,
+                                                                                .w900,
                                                                         fontSize:
-                                                                            18),
+                                                                            16),
                                                                   ),
                                                                 ],
                                                               ),
@@ -775,13 +892,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                   Text(
                                                                     "\$1500",
                                                                     style: TextStyle(
-                                                                        color: Colors
-                                                                            .black,
+                                                                        color: Colors.grey[
+                                                                            800],
                                                                         fontWeight:
                                                                             FontWeight
                                                                                 .w700,
                                                                         fontSize:
-                                                                            16),
+                                                                            18),
                                                                   ),
                                                                   Padding(
                                                                     padding: EdgeInsets
@@ -792,6 +909,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                                                   Text(
                                                                     '\$2500',
                                                                     style: TextStyle(
+                                                                        color: Colors.grey[
+                                                                            700],
+                                                                        fontWeight:
+                                                                            FontWeight
+                                                                                .w700,
                                                                         fontSize:
                                                                             14,
                                                                         decoration:
@@ -801,12 +923,26 @@ class _MyHomePageState extends State<MyHomePage> {
                                                               ),
                                                             ),
                                                             Container(
-                                                              child:
-                                                                  RaisedButton(
-                                                                color: Color(
-                                                                    0xFF5E1303),
-                                                                child:
-                                                                    Text("Buy"),
+                                                              margin: EdgeInsets
+                                                                  .only(
+                                                                      top: 20),
+                                                              width:
+                                                                  MediaQuery.of(
+                                                                          context)
+                                                                      .size
+                                                                      .width,
+                                                              height: 40,
+                                                              color: Color(
+                                                                  0xFF5E1303),
+                                                              child: Center(
+                                                                child: Text(
+                                                                  "Add to cart",
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          16,
+                                                                      color: Colors
+                                                                          .white),
+                                                                ),
                                                               ),
                                                             )
                                                           ],
